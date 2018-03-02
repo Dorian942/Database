@@ -19,7 +19,7 @@
     <!-- Custom styles for this template -->
     <link href="theme/css/landing-page.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
@@ -54,20 +54,31 @@
             </h1>
           </div>
           <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-            
               <div class="flex-container"> 
-			  
-				Ville<br>
-				<input type="text" name="ville"><br>
-				Debut Location<br>
-				<input id="date" type="date" ><br>
-				Fin Location<br>
-				<input id="date" type="date" >
-				<div class="row">
-				<span class="flex-item">1</span>
-				</div>
-				
-			  </div>
+			           <div class="flex-flex">
+    				      <p class="nav-flex">
+                    Ville
+                  </p>
+                  <p class="nav-flex">
+                    Debut Location
+                  </p>
+                  <p class="nav-flex">
+                    Fin Location
+                  </p>
+                </div>
+                <div class=flex-flexi>
+      				    <input type="text" name="ville"><br>
+      				    
+      				    <input id="date" type="date" ><br>
+      				    
+      				    <input id="date" type="date" >
+                </div>
+
+				      <div class="row">
+				        <span class="flex-item"></span>
+				      </div>
+				    
+			      </div>
             
           </div>
         </div>
@@ -87,22 +98,28 @@
               <p class="lead mb-0">Get best quality products and save your money.</p>
             </div>
           </div>
+
           <div class="col-lg-4">
             <div class="features-icons-item mx-auto mb-0 mb-lg-3">
               <div class="features-icons-icon d-flex">
-                <i class="icon-clock m-auto text-primary"></i>
+                <i class="icon-clock m-auto text-primary"></i>       
               </div>
               <h3>Save Time</h3>
               <p class="lead mb-0">Our delivery crew will bring you your order in the next 30 minutes.</p>
             </div>
           </div>
+
           <div class="col-lg-4">
             <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
               <div class="features-icons-icon d-flex">
-                <i class="icon-music-tone-alt m-auto text-primary"></i>
+                <div class="fafa-automobile">
+
+                  <i class="fa fa-automobile"></i>  
+                </div>
+                 
               </div>
-              <h3>Save The Party</h3>
-              <p class="lead mb-0">Best parties in town are the unexpected ones.</p>
+              <h3>Get the best</h3>
+              <p class="lead mb-0">Best carss.</p>
             </div>
           </div>
         </div>
@@ -113,7 +130,10 @@
     <section class="showcase">
       <div class="container-fluid p-0">
         <div class="row no-gutters">
-          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/drink-cheers.jpeg');"></div>
+          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('https://cdn4.i-scmp.com/sites/default/files/styles/landscape/public/images/methode/2017/02/15/b7a0a0c6-f355-11e6-8a92-5a4126ffa8eb_1280x720.JPG?itok=31ayrex6');"></div>
+
+          
+
           <div class="col-lg-6 order-lg-1 my-auto showcase-text">
             <h2>Focus On The Party</h2>
             <p class="lead mb-0">
@@ -123,7 +143,7 @@
         </div>
 
         <div class="row no-gutters">
-          <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/stock.jpeg');"></div>
+          <div class="col-lg-6 text-white showcase-img" style="background-image: url('https://cdn.allwallpaper.in/wallpapers/1920x1080/9747/cars-ferrari-supercar-f12-1920x1080-wallpaper.jpg');"></div>
           <div class="col-lg-6 my-auto showcase-text">
             <h2>All What You Need</h2>
             <p class="lead mb-0">
@@ -133,7 +153,7 @@
         </div>
 
         <div class="row no-gutters">
-          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/deliver.jpeg');"></div>
+          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('http://www.wallpapers-mania.org/images/vehicules/fonds_motos/FONDOS-HD-moto-wallpaper_fond_ecran_hd_moto_speed.jpg');"></div>
           <div class="col-lg-6 order-lg-1 my-auto showcase-text">
             <h2>Delivered In Less Than 30 Minutes</h2>
             <p class="lead mb-0">
