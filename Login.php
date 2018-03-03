@@ -63,7 +63,22 @@
         $user = $userManager->getUserByEmail($_POST['email']);
         if($user && UserManager::checkPasswordHash($_POST['psw'], $user->getPsw())) {
           Core::login($user);
-          header('Location: index.php');
+		 $pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
+		 $bdd = new PDO('mysql:host=localhost;dbname=test', 'root', '',   $pdo_options);
+		 $requser = $bdd->prepare("SELECT * FROM client WHERE Login = ? ");
+		 $requser->execute(array($_POST['email']));
+		 $userexist = $requser->rowCount();
+         if($userexist == 1)
+		 {
+			 $userinfo = $requser->fetch();
+			 $_SESSION['Client_ID'] = $userinfo['Client_ID'];
+			 $_SESSION['Nom'] = $userinfo['Nom'];
+			 $_SESSION['Login'] = $userinfo['Login'];
+			 $_SESSION['Prenom'] = $userinfo['Prenom'];
+			 $_SESSION['Adresse'] = $userinfo['Adresse'];
+			 $_SESSION['Piece_Identite'] = $userinfo['Piece_Identite'];
+			 header('Location: user/booking.php?id='.$_SESSION['Login']);  
+		 }
         } else {
           $loginErreur = "Erreur de login.";
         }
