@@ -83,8 +83,8 @@
               <div class="features-icons-icon d-flex">
                 <i class="icon-wallet m-auto text-primary"></i>
               </div>
-              <h3>Save Money</h3>
-              <p class="lead mb-0">Get best quality products and save your money.</p>
+              <h3>Economisez de l'argent</h3>
+              <p class="lead mb-0">Louez les meilleurs produits aux meilleurs prix.</p>
             </div>
           </div>
           <div class="col-lg-4">
@@ -92,8 +92,8 @@
               <div class="features-icons-icon d-flex">
                 <i class="icon-clock m-auto text-primary"></i>
               </div>
-              <h3>Save Time</h3>
-              <p class="lead mb-0">Our delivery crew will bring you your order in the next 30 minutes.</p>
+              <h3>Economisez du temps</h3>
+              <p class="lead mb-0">Des locations en toute rapidité.</p>
             </div>
           </div>
           <div class="col-lg-4">
@@ -101,8 +101,8 @@
               <div class="features-icons-icon d-flex">
                 <i class="icon-music-tone-alt m-auto text-primary"></i>
               </div>
-              <h3>Save The Party</h3>
-              <p class="lead mb-0">Best parties in town are the unexpected ones.</p>
+              <h3>Louez le meilleur</h3>
+              <p class="lead mb-0">Louez les voitures du futures aujourd'hui.</p>
             </div>
           </div>
         </div>
@@ -115,9 +115,9 @@
         <div class="row no-gutters">
           <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/drink-cheers.jpeg');"></div>
           <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-            <h2>Focus On The Party</h2>
+            <h2>Conduisez des voitures de rêves</h2>
             <p class="lead mb-0">
-              No need to loose time going to the grocery shop, we will bring you all what you need directly at your party house.
+              Toutes les voitures de vos rêves à porté de mains.
             </p>
           </div>
         </div>
@@ -125,9 +125,9 @@
         <div class="row no-gutters">
           <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/stock.jpeg');"></div>
           <div class="col-lg-6 my-auto showcase-text">
-            <h2>All What You Need</h2>
+            <h2>Des intérieurs entièrement customisables</h2>
             <p class="lead mb-0">
-              We got the biggest warehouses to meet your needs. Never be short again during parties.
+              Toute vos envies sont réalisable pour vous sentir à bord de votre propre voiture.
             </p>
           </div>
         </div>
@@ -135,9 +135,9 @@
         <div class="row no-gutters">
           <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/deliver.jpeg');"></div>
           <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-            <h2>Delivered In Less Than 30 Minutes</h2>
+            <h2>Lassé de conduire des voitures ?</h2>
             <p class="lead mb-0">
-              Our delivery crew is trained to go as fast as possible, even when the city is crowded.
+              Venez loué nos prototypes de motos pour des sensations incoryables.
             </p>
           </div>
         </div>
