@@ -203,7 +203,7 @@
             <input type="hidden" name="form_enregistrer" value="form_enregistrer" />
 
                       <div class="pt-4 text-center">
-              <button type="submit" class="btn btn-primary">S'inscrire</button>
+              <button type="submit" class="btn btn-primary">Me connecter</button>
             </div>
                     </form>
             </div>
