@@ -77,41 +77,26 @@
 					
 					?> <br>
 						
+						
+						
 				  
 					<label><b>Vehicule</b></label>
-					<input type=		"text" placeholder="Entrer Le Vehicule" name="vehicule" id="vehicule" required><br>
+					<input type="text" placeholder="Entrer Le Vehicule" name="vehicule" id="vehicule" value=" " required><br>
 					
 					<label><b>Date Debut</b></label>
-					<input type="date"  name="date" id="date" required>
-					<?php 
-					
-					$duree = 3;
-					$tarif = 110;
-					$prix = $duree * $tarif ;
-					
-					date_default_timezone_set('Europe/Paris');
-					$date = date('y/m/d h:i:s ', time());
-					
-					
-					?>
-					
+					<input type="date"  name="date_debut" id="date" value="<?php echo date('Y-m-d'); ?>"required>
 					
 
 					<label><b>Date fin</b></label>
-					<input type="date"  name="date" id="date"required><br>
+					<input type="date"  name="date_fin" id="date" value="<?php echo date('Y-m-d'); ?>"required><br>
+					
+					
 
 					<input type="checkbox" name="asssure"/> Assurance
 					<p>En prenant une assurance vous acceptez nous <a href="#">CGU</a>.</p>
 					
-					<?php 
-					
-					
-					if (isset($_POST['assure'])) $assurance = '1'; else $assurance = '0';
-					
-					?>
-
 					<div class="clearfix">
-					  <button type="button" class="cancelbtn">Annuler</button>
+					  <button type="button"  class="cancelbtn">Annuler</button>
 					  <button type="submit" class="signupbtn">Valider</button>
 					</div>
 				  </div>
@@ -129,6 +114,41 @@
   </html>
   
   <?php
+  if(isset($_POST['vehicule']) AND isset($_POST['date_debut']) AND isset($_POST['date_fin']))
+    {
+		
+			
+					$assurance = (isset($_POST['assure'])) ? 1 : 0;
+
+					
+					if (isset($_POST['assure'])) $assurance = '1'; else $assurance = '0';
+		
+					echo $assurance ; 
+					
+					
+					$date_debut = date('Y-m-d', strtotime($_POST['date_debut']));
+					$date_fin = date('Y-m-d', strtotime($_POST['date_fin']));
+					
+					$date_debut1 = strtotime($date_debut) ; 
+					$date_fin1 = strtotime($date_fin) ;
+					
+					$duree = $date_fin1 - $date_debut1;
+					$jour = $duree / 86400;
+					$tarif = 110;
+					if($assurance == 1)
+					{
+						$ifassurance = 120 ;
+						
+					}else $ifassurance = 0 ;
+					
+					$prix = $jour * $tarif + $ifassurance;
+					
+					date_default_timezone_set('Europe/Paris');
+					$date = date('y/m/d h:i:s ', time());
+					
+					
+				
+					
 	
         try
         {
@@ -138,14 +158,14 @@
             $req = $bdd->prepare('INSERT INTO devis(Duree, Type_Vehicule, Prix, Assurance, Devis_Date, Client_ID, Facture_ID, Vehicule_ID) VALUES(:Duree, :Type_Vehicule, :Prix, :Assurance, :Devis_Date, :Client_ID, :Facture_ID, :Vehicule_ID)');
             $req->execute(array(
 			
-            'Duree' => $duree,
+            'Duree' => $jour,
             'Type_Vehicule' => $_POST['vehicule'],
             'Prix' => $prix,
 			'Assurance' => $assurance ,
             'Devis_Date' => $date ,
             'Client_ID' => $_SESSION['Client_ID'],
-            'Facture_ID' => 2,
-            'Vehicule_ID' => 3
+            'Facture_ID' => null,
+            'Vehicule_ID' => null
             
 			
             ));
@@ -153,6 +173,10 @@
 		}catch(Exception $e)
         {
             die('Erreur : '.$e->getMessage());
-        }
-    
+        
+		
+		}
+		
+		header('Location: facture.php ');
+    }
 ?>
