@@ -1,16 +1,11 @@
-<?php
-	session_start(); // ici on continue la session
-	if ((!isset($_SESSION['Client_ID'])) || ($_SESSION['Client_ID'] == ''))
-	{
-		echo 'Vous ne pouvez pas acceder a cette page'; 
-		exit();
-	}
-		$pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
-		$bdd = new PDO('mysql:host=localhost;dbname=test', 'root', '',   $pdo_options);	
-		$stmt = $bdd->query('SELECT * FROM devis WHERE Client_ID = \'' . $_SESSION['Client_ID'] . '\' ') ; 
+<?php 
+session_start();
+
+// Suppression des variables de session et de la session
+$_SESSION = array();
+session_destroy();
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -51,8 +46,8 @@
              <!--  <li><a href="admin_products.php" class="normal-link">Products</a></li>  -->
              <!-- <li><a class="btn btn-secondary" href="order.php">Front-office</a></li>  -->
               <li><a href="../index.php" class="normal-link">Acceuil</a></li>
-                <li><a href="profil.php" class="normal-link">Mon Profil</a></li>
-                <li><a class="btn btn-primary" href="deconnexion.php">Deconnexion</a></li>
+                <li><a href="../login.php" class="normal-link">S'inscrire</a></li>
+                <li><a class="btn btn-primary" href="../login.php">Se Connecter</a></li>
              <!--  <li><a href="profile.php" class="normal-link">My profile</a></li>	-->
              <!--   <li><a href="old_orders.php" class="normal-link">My old orders</a></li> -->
              <!--   <li><a href="logout.php" class="normal-link">Logout</a></li> -->
@@ -68,47 +63,32 @@
         <div class="row">
           <div class="col-xl-9 mx-auto">
             <h1 class="mb-5">
-                Pre-Facturation 
+                A bientôt sur Yolocation
             </h1>
           </div>
         </div>
       </div>
     </header>
 	
+	<div id="wrapper">
+			<center>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
 			<div id="maincontent">
-				<form method="post" action="" class="inscription">
-				  <div class="container">
-				  	<label><b>Nom : </b></label><?php echo $_SESSION['Nom']; ?><br> 
-					<label><b>Prenom : </b></label><?php echo $_SESSION['Prenom']; ?><br> 
-					<label><b>Adresse : </b></label><?php echo $_SESSION['Adresse']; ?><br> 
-				<?php 
-
-					while($donne = $stmt->fetch())
-					{ ?>
-					<label><b>___________________________________________________________________________________________</b></label><br>
-					
-					<label><b>ID facture : </b></label><?php echo $donne['Devis_ID'];?><br> 		
-					<label><b>Vehicule :</b></label><?php echo $donne['Type_Vehicule']; ?><br> 
-					<label><b>Nombre de jours : </b></label><?php echo $donne['Duree']; ?><br>
-					<label><b>Assurance : </b></label><?php echo $donne['Assurance']; ?><br>
-					<label><b>Date de location :</b></label><?php echo $donne['Devis_Date']; ?><br>
-					<label><b>Montant a payer :</b></label><?php echo $donne['Prix']; ?><br>
-
-					<?php
-					}
-					?>
-					
-					<div class="clearfix">
-					  <button type="button" class="cancelbtn">Annuler</button>
-					  <button type="submit" class="signupbtn">Payer</button>
-					</div>
-				  </div>
-				</form>
+				<div class="imgcontainer">
+					<img src="http://www.renault-5.net/supercinq/logo_ByeBye.jpg" alt="bye" class="bye">
+				</div>
+				<h2>A bientôt</h2>
 			</div>
+			</center>
+		
+		</div>	
 	
-		
-		
-  </body>
-  </html>
-  
-  
+	
+	</body>
+	
+	</html>
