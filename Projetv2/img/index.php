@@ -33,9 +33,9 @@
              <!--  <li><a href="admin.php" class="normal-link">View active orders</a></li> -->
              <!--  <li><a href="admin_products.php" class="normal-link">Products</a></li>  -->
              <!-- <li><a class="btn btn-secondary" href="order.php">Front-office</a></li>  -->
-              <li><a href="index.php" class="normal-link">Acceuil</a></li>
-                <li><a href="login.php" class="normal-link">S'inscrire</a></li>
-                <li><a class="btn btn-primary" href="login.php">Se Connecter</a></li>
+              <li><a href="index.php" class="normal-link">Home</a></li>
+                <li><a href="register.php" class="normal-link">Register</a></li>
+                <li><a class="btn btn-primary" href="register.php">Sign In</a></li>
              <!--  <li><a href="profile.php" class="normal-link">My profile</a></li>	-->
              <!--   <li><a href="old_orders.php" class="normal-link">My old orders</a></li> -->
               <!--   <li><a href="logout.php" class="normal-link">Logout</a></li> -->
@@ -83,8 +83,8 @@
               <div class="features-icons-icon d-flex">
                 <i class="icon-wallet m-auto text-primary"></i>
               </div>
-              <h3>Economisez de l'argent</h3>
-              <p class="lead mb-0">Louez les meilleurs produits aux meilleurs prix.</p>
+              <h3>Save Money</h3>
+              <p class="lead mb-0">Get best quality products and save your money.</p>
             </div>
           </div>
           <div class="col-lg-4">
@@ -92,8 +92,8 @@
               <div class="features-icons-icon d-flex">
                 <i class="icon-clock m-auto text-primary"></i>
               </div>
-              <h3>Economisez du temps</h3>
-              <p class="lead mb-0">Des locations en toute rapidité.</p>
+              <h3>Save Time</h3>
+              <p class="lead mb-0">Our delivery crew will bring you your order in the next 30 minutes.</p>
             </div>
           </div>
           <div class="col-lg-4">
@@ -101,8 +101,8 @@
               <div class="features-icons-icon d-flex">
                 <i class="icon-music-tone-alt m-auto text-primary"></i>
               </div>
-              <h3>Louez le meilleur</h3>
-              <p class="lead mb-0">Louez les voitures du futures des aujourd'hui.</p>
+              <h3>Save The Party</h3>
+              <p class="lead mb-0">Best parties in town are the unexpected ones.</p>
             </div>
           </div>
         </div>
@@ -113,31 +113,31 @@
     <section class="showcase">
       <div class="container-fluid p-0">
         <div class="row no-gutters">
-          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('https://cdn4.i-scmp.com/sites/default/files/styles/landscape/public/images/methode/2017/02/15/b7a0a0c6-f355-11e6-8a92-5a4126ffa8eb_1280x720.JPG?itok=31ayrex6');"></div>
+          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/drink-cheers.jpeg');"></div>
           <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-            <h2>Conduisez des voitures de rêves</h2>
+            <h2>Focus On The Party</h2>
             <p class="lead mb-0">
-              Toutes les voitures de vos rêves à porté de mains.
+              No need to loose time going to the grocery shop, we will bring you all what you need directly at your party house.
             </p>
           </div>
         </div>
 
         <div class="row no-gutters">
-          <div class="col-lg-6 text-white showcase-img" style="background-image: url('https://cdn.allwallpaper.in/wallpapers/1920x1080/9747/cars-ferrari-supercar-f12-1920x1080-wallpaper.jpg');"></div>
+          <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/stock.jpeg');"></div>
           <div class="col-lg-6 my-auto showcase-text">
-            <h2>Des intérieurs entièrement customisables</h2>
+            <h2>All What You Need</h2>
             <p class="lead mb-0">
-              Toute vos envies sont réalisable pour vous sentir à bord de votre propre voiture.
+              We got the biggest warehouses to meet your needs. Never be short again during parties.
             </p>
           </div>
         </div>
 
         <div class="row no-gutters">
-          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('http://www.wallpapers-mania.org/images/vehicules/fonds_motos/FONDOS-HD-moto-wallpaper_fond_ecran_hd_moto_speed.jpg');"></div>
+          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/deliver.jpeg');"></div>
           <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-            <h2>Lassé de conduire des voitures ?</h2>
+            <h2>Delivered In Less Than 30 Minutes</h2>
             <p class="lead mb-0">
-              Venez loué nos prototypes de motos pour des sensations incroyable.
+              Our delivery crew is trained to go as fast as possible, even when the city is crowded.
             </p>
           </div>
         </div>
