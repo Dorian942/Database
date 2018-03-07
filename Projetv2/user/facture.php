@@ -74,19 +74,35 @@
         </div>
       </div>
     </header>
-	
+		<div id="cont">
 			<div id="maincontent">
+				
 				<form method="post" action="" class="inscription">
 				  <div class="container">
-				  	<label><b>Nom : </b></label><?php echo $_SESSION['Nom']; ?><br> 
-					<label><b>Prenom : </b></label><?php echo $_SESSION['Prenom']; ?><br> 
-					<label><b>Adresse : </b></label><?php echo $_SESSION['Adresse']; ?><br> 
+					  <div class="column">
+					 	<div> <img class="element" src="https://www.virginexperiencedays.co.uk/content/img/product/main/supercar-blast-plus-24101209.jpg" > </div></div>
+							<div> 
+							<h2> Nom voiture</h2>
+							<p>blabla</p>
+							<h2>Départ</h2><p>blabla</p>
+							<h2>Retour</h2><p>blabla</p>
+							<h2>Période de location</h2><p>blabla</p>
+							<h2>Equipement du véhicule</h2><p>blabla</p>
+							<h2>Capacité</h2><p>blabla</p>
+							</div>
+						</div>
+					
+					<div class="element">
+						<div><h2 class="titre"> Détails du conducteur  </h2> </div>
+						<label><b>Nom : </b></label><?php echo $_SESSION['Nom']; ?><br> 
+						<label><b>Prenom : </b></label><?php echo $_SESSION['Prenom']; ?><br> 
+						<label><b>Adresse : </b></label><?php echo $_SESSION['Adresse']; ?><br> 
 				<?php 
 
 					while($donne = $stmt->fetch())
 					{ ?>
 					<label><b>___________________________________________________________________________________________</b></label><br>
-					
+					<div><h2 class="titre"> Détails de la location   </h2> </div>
 					<label><b>ID facture : </b></label><?php echo $donne['Devis_ID'];?><br> 		
 					<label><b>Vehicule :</b></label><?php echo $donne['Type_Vehicule']; ?><br> 
 					<label><b>Nombre de jours : </b></label><?php echo $donne['Duree']; ?><br>
@@ -98,14 +114,15 @@
 					}
 					?>
 					
-					<div class="clearfix">
-					  <button type="button" class="cancelbtn">Annuler</button>
-					  <button type="submit" class="signupbtn">Payer</button>
-					</div>
-				  </div>
+						<div class="clearfix">
+							<div><button type="button" class="cancelbtn">Annuler</button></div>
+							<div><button type="submit" class="signupbtn">Payer</button></div>
+						</div>
+				  	</div>
+				</div>	  
 				</form>
 			</div>
-	
+	  	</div>
 		
 		
   </body>
