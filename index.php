@@ -27,7 +27,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-light bg-light static-top">
       <div class="container">
-        <a class="navbar-brand" href="index.php">YoLocation</a>
+        <a class="navbar-brand" href="index.php"><div class="yolocation"><img src="img/logo.png" width="100px;"/></div></a>
 
         <ul class="navbar-right">
               <li><a href="../index.php" class="normal-link">Accueil</a></li>
