@@ -99,7 +99,9 @@
           <div class="col-lg-4">
             <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
               <div class="features-icons-icon d-flex">
-                <i class="icon-music-tone-alt m-auto text-primary"></i>
+                <div class="fafa-automobile">
+                  <i class="fa fa-automobile"></i>  
+                </div>
               </div>
               <h3>Louez le meilleur</h3>
               <p class="lead mb-0">Louez les voitures du futures des aujourd'hui.</p>
