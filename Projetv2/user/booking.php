@@ -120,10 +120,11 @@
 	{
 		
 		?>
-		<option>
+		<option >
 		<?php 
 		echo $row['Marque'];
 		?>
+		
 		</option>
 		<?php
 	}
@@ -238,6 +239,10 @@
 					$date = date('y/m/d h:i:s ', time());
 					
 					
+					
+					$getVehiculeID = $bdd->query('SELECT * FROM vehicule') ; 
+					$getVehiculeID = $bdd->query('SELECT Vehicule_ID FROM vehicule WHERE Marque = \'' . $sel1 . '\'  ') ;
+					$getVehiculeIDQuery = $getVehiculeID -> fetch() ; 
 				
 					
 	
@@ -254,7 +259,7 @@
             'Devis_Date' => $date ,
             'Client_ID' => $_SESSION['Client_ID'],
             'Facture_ID' => null,
-            'Vehicule_ID' => null
+            'Vehicule_ID' => $getVehiculeIDQuery['Vehicule_ID']
             
 			
             ));

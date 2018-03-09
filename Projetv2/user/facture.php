@@ -8,6 +8,8 @@
 		$pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
 		$bdd = new PDO('mysql:host=localhost;dbname=test', 'root', '',   $pdo_options);	
 		$stmt = $bdd->query('SELECT * FROM devis WHERE Client_ID = \'' . $_SESSION['Client_ID'] . '\' ') ; 
+		$getVehicule = $bdd->query('SELECT * FROM vehicule') ; 
+		
 
 ?>
 
@@ -74,37 +76,25 @@
         </div>
       </div>
     </header>
-		<div id="cont">
+	
 			<div id="maincontent">
-				
 				<form method="post" action="" class="inscription">
 				  <div class="container">
-					  <div class="column">
-					 	<div> <img class="element" src="https://www.virginexperiencedays.co.uk/content/img/product/main/supercar-blast-plus-24101209.jpg" > </div></div>
-							<div> 
-							<h2> Nom voiture</h2>
-							<p>blabla</p>
-							<h2>Départ</h2><p>blabla</p>
-							<h2>Retour</h2><p>blabla</p>
-							<h2>Période de location</h2><p>blabla</p>
-							<h2>Equipement du véhicule</h2><p>blabla</p>
-							<h2>Capacité</h2><p>blabla</p>
-							</div>
-						</div>
-					
-					<div class="element">
-						<div><h2 class="titre"> Détails du conducteur  </h2> </div>
-						<label><b>Nom : </b></label><?php echo $_SESSION['Nom']; ?><br> 
-						<label><b>Prenom : </b></label><?php echo $_SESSION['Prenom']; ?><br> 
-						<label><b>Adresse : </b></label><?php echo $_SESSION['Adresse']; ?><br> 
+				  	<label><b>Nom : </b></label><?php echo $_SESSION['Nom']; ?><br> 
+					<label><b>Prenom : </b></label><?php echo $_SESSION['Prenom']; ?><br> 
+					<label><b>Adresse : </b></label><?php echo $_SESSION['Adresse']; ?><br> 
 				<?php 
 
 					while($donne = $stmt->fetch())
 					{ ?>
 					<label><b>___________________________________________________________________________________________</b></label><br>
-					<div><h2 class="titre"> Détails de la location   </h2> </div>
+					
 					<label><b>ID facture : </b></label><?php echo $donne['Devis_ID'];?><br> 		
 					<label><b>Vehicule :</b></label><?php echo $donne['Type_Vehicule']; ?><br> 
+					<?php 
+					$getVehicule = $bdd->query('SELECT img FROM vehicule WHERE Marque = \'' . $donne['Type_Vehicule'] . '\'  ') ;
+					$getVehiculeQuery = $getVehicule -> fetch() ; ?>
+					<img class="element" src="<?php echo $getVehiculeQuery['img'] ?>"  height="50%" width="50%"><br>
 					<label><b>Nombre de jours : </b></label><?php echo $donne['Duree']; ?><br>
 					<label><b>Assurance : </b></label><?php echo $donne['Assurance']; ?><br>
 					<label><b>Date de location :</b></label><?php echo $donne['Devis_Date']; ?><br>
@@ -114,15 +104,14 @@
 					}
 					?>
 					
-						<div class="clearfix">
-							<div><button type="button" class="cancelbtn">Annuler</button></div>
-							<div><button type="submit" class="signupbtn">Payer</button></div>
-						</div>
-				  	</div>
-				</div>	  
+					<div class="clearfix">
+					  <button type="button" class="cancelbtn">Annuler</button>
+					  <button type="submit" class="signupbtn">Payer</button>
+					</div>
+				  </div>
 				</form>
 			</div>
-	  	</div>
+	
 		
 		
   </body>
