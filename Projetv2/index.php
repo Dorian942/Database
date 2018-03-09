@@ -54,20 +54,32 @@
             </h1>
           </div>
           <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-            
-              <div class="flex-container"> 
-			  
-				Ville<br>
-				<input type="text" name="ville"><br>
-				Debut Location<br>
-				<input id="date" type="date" ><br>
-				Fin Location<br>
-				<input id="date" type="date" >
-				<div class="row">
-				<span class="flex-item">1</span>
-				</div>
-				
-			  </div>
+          	<div class="flex-container"> 
+			<div class="flex-flex">
+    				<div class="nav-flex">
+                                	Ville
+                            	</div>
+                           	<div class=flex-flexi>
+                               		<input type="text" name="ville">
+                           	</div>
+                        </div>
+                  	<div class="flex-flex">
+    				<div class="nav-flex">
+                                	Debut location
+                            	</div>
+                           	<div class=flex-flexi>
+                              		<input type="text" name="ville">
+                           	</div>
+                        </div>
+                  	<div class="flex-flex">
+    			 	<div class="nav-flex">
+                                	Ville
+                            	</div>
+                         	<div class=flex-flexi>
+                               		<input type="text" name="ville">
+                           	</div>
+                        </div> 			    
+		</div>  
             
           </div>
         </div>
