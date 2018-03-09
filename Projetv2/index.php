@@ -73,7 +73,7 @@
                         </div>
                   	<div class="flex-flex">
     			 	<div class="nav-flex">
-                                	Ville
+                                	Fin location
                             	</div>
                          	<div class=flex-flexi>
                                		<input type="text" name="ville">
